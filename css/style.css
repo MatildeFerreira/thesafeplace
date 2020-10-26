@@ -1,0 +1,575 @@
+/*WB2 2020/21 - Matilde Ferreira*/
+@font-face {
+    font-family: 'Recursive';
+    font-style: oblique 0deg 15deg;
+    font-weight: 300 1000;
+    font-display: swap;
+    src: url('../fonts/Recursive_VF_1.065.woff2') format('woff2-variations');
+}
+
+body {
+    width: 100%;
+    font-size: 7px;
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "MONO"1, "wght"400;
+    text-align: center;
+    background-color: #F2F2F2;
+
+}
+
+#inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F2F2;
+    transition: background-color 1s;
+    z-index: 5;
+    overflow: hidden;
+}
+
+h1:hover {
+    animation: hover 1000ms forwards;
+    transition: background-color 1s;
+    background-color: rgb(240, 240, 240);
+    border: 1.5px solid rgba(100, 100, 100);
+}
+
+h1 {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30vh;
+    font-size: 40px;
+    cursor: pointer;
+    font-variation-settings: 'wght'100;
+    animation: mono 2000ms forwards;
+    cursor: "pointer";
+    padding: 30px 5px 30px 15px;
+    background-color: white;
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: 15px;
+    box-sizing: border-box;
+
+
+}
+
+@keyframes hover {
+    0% {
+        font-variation-settings: 'MONO'1, 'wght'400, 'slnt'0;
+    }
+
+
+    100% {
+        font-variation-settings: 'MONO'0, 'wght'500, 'slnt'-15;
+    }
+}
+
+@keyframes mono {
+    0% {
+        font-variation-settings: 'MONO'0, 'wght'100;
+    }
+
+    100% {
+        font-variation-settings: 'MONO'1, 'wght'400;
+
+    }
+}
+
+#myName {
+    position: absolute;
+    top: 80vh;
+    left: 30%;
+    width: 40%;
+    text-align: center;
+    cursor: "pointer";
+    padding: 5px 5px 5px 5px;
+    background-color: white;
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
+
+
+}
+
+/*Trama textual de fundo*/
+#BG {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 8px;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: font-size 2s, color .45s;
+    z-index: -3;
+    font-variation-settings:'MONO'1, 'wght'600;
+}
+
+/*Trama textual de fundo quando o rato passa por cima*/
+#BG:hover {
+    animation: bgHover 4000ms forwards;
+}
+
+@keyframes bgHover {
+    0% {
+        font-variation-settings: 'MONO'1, 'wght'600;
+    }
+
+    100% {
+        font-variation-settings: 'MONO'1, 'wght'900;
+
+    }
+}
+
+/*Trama textual das janelas*/
+.WINDOW {
+    color: black;
+    overflow: hidden;
+    position: absolute;
+    letter-spacing: 0px;
+    line-height: 8px;
+    word-spacing: -1px;
+    transition: font-size 1s linear;
+    z-index: 1;
+}
+
+
+/*Frames verticais*/
+#FL,
+#FR,
+#FMV {
+    width: 2%;
+    height: 65vh;
+    z-index: 3;
+}
+
+/* Frame de cima e de baixo*/
+#FT,
+#FB {
+    height: 2vh;
+}
+
+/*Frame de cima*/
+#FT {
+    top: 3.5vh;
+}
+
+/*Frame de baixo*/
+#FB {
+    top: 70.5vh;
+}
+
+/*Frame da esquerda e direita*/
+#FL,
+#FR {
+    top: 5.5vh;
+}
+
+/*Frame do meio horizontal*/
+#FMH {
+    top: 40vh;
+    height: 2vh;
+    z-index: 2;
+}
+
+/*Frame do meio vertical*/
+#FMV {
+    top: 5.5vh;
+    margin-left: 49%;
+}
+
+/*Trama do céu */
+#SKY {
+    overflow: hidden;
+    position: absolute;
+    height: 44vh;
+    top: 5.3vh;
+    transition: color 1s linear, font-size 1s linear;
+    background-color: #F2F2F2;
+}
+
+.SKYzero {
+    color: #FFF;
+    font-Size: 7px;
+    line-Height: 8px;
+    font-Weight: 600;
+    word-Spacing: 0px;
+    font-variation-settings: 'wght'400;
+}
+
+.SKYzero:hover {
+    color: #b3e5fc;
+}
+
+.SKYum {
+    color: #E0E0E0;
+    font-Size: 6.5px;
+    line-Height: 6px;
+    font-Weight: 700;
+    word-Spacing: -0.5px;
+    font-variation-settings: 'wght'500;
+}
+
+.SKYum:hover {
+    color: #039be5;
+}
+
+.SKYdois {
+    color: #D0D0D0;
+    font-Size: 6px;
+    line-Height: 5.5px;
+    font-Weight: 800;
+    word-Spacing: -1px;
+    font-variation-settings: 'wght'600;
+}
+
+.SKYdois:hover {
+    color: #0277bd;
+}
+
+.SKYtres {
+    color: #BEBEBE;
+    font-Size: 5.5px;
+    line-Height: 4.5px;
+    font-Weight: 900;
+    word-Spacing: -1.5px;
+    font-variation-settings: 'wght'700;
+}
+
+.SKYtres:hover {
+    color: #01579b;
+}
+
+/*Trama do relvado */
+#GRASS {
+    height: 21.5vh;
+    overflow: hidden;
+    position: absolute;
+    top: 49vh;
+    background-color: #F2F2F2;
+    transition: color 1s linear, font-size 1s linear;
+}
+
+
+.GRASSzero {
+    color: #D3D3D3;
+    font-size: 7px;
+    line-height: 8px;
+    font-weight: 600;
+    word-spacing: 0px;
+    font-variation-settings: 'wght'400;
+}
+
+.GRASSzero:hover {
+    color: #b4e69e;
+}
+
+.GRASSum {
+    color: #C0C0C0;
+    font-Size: 6.5px;
+    line-Height: 6px;
+    font-Weight: 700;
+    word-Spacing: -0.5px;
+    font-variation-settings: 'wght'500;
+}
+
+.GRASSum:hover {
+    color: #8cb37b;
+}
+
+.GRASSdois {
+    color: #B0B0B0;
+    font-Size: 6px;
+    line-Height: 5.5px;
+    font-Weight: 800;
+    word-Spacing: -1px;
+    font-variation-settings: 'wght'600;
+
+}
+
+.GRASSdois:hover {
+    color: #648058;
+}
+
+.GRASStres {
+    color: #989898;
+    font-Size: 5.5px;
+    line-Height: 4.5px;
+    font-Weight: 900;
+    word-Spacing: -1.5px;
+    font-variation-settings: 'wght'700;
+
+}
+
+.GRASStres:hover {
+    color: #3c4d35;
+}
+
+/*Caixa de diálogo*/
+#box {
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "MONO"1, "wght"420;
+    text-align: left;
+    font-weight: 400;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(250, 250, 250, 1);
+    padding: 15px 15px 15px 15px;
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: 5px;
+}
+
+.boxTLM {
+    padding-top: 15px;
+    left: 6%;
+    width: 88%;
+    font-size: 14px;
+    top: 75vh;
+    height: 17vh;
+}
+
+.boxTabl {
+    padding-top: 15px;
+    left: 16%;
+    width: 68%;
+    font-size: 15px;
+    top: 75vh;
+    height: 17vh;
+}
+
+.boxPort {
+    padding-top: 15px;
+    left: 16%;
+    width: 68%;
+    font-size: 17px;
+    top: 75vh;
+    height: 17vh;
+}
+
+.boxMonit {
+    padding-top: 20px;
+    left: 16%;
+    width: 68%;
+    font-size: 22px;
+    top: 80vh;
+    height: 17vh;
+    line-height: 23px;
+}
+
+/*Caixa de diálogo - Triângulo Branco*/
+#box:after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: rgba(250, 250, 250, 1);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -16px;
+    margin-bottom: -28px;
+}
+
+/*Caixa de diálogo - Triângulo Cinzento (para que sejam vísiveis as bordas)*/
+#box:before {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: rgba(150, 150, 150, 1);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -16.5px;
+    margin-bottom: -29.5px;
+}
+
+/*Frase inicial*/
+#um {
+    display: block;
+    height: 15px;
+    text-transform: lowercase;
+
+}
+
+/*Frases seguintes*/
+#dois,
+#tres,
+#quatro,
+#cinco {
+    display: none;
+    line-height: 20px;
+}
+
+/*Botões*/
+#holder {
+    position: absolute;
+    bottom: 1vh;
+    right: 2vh;
+}
+
+.button {
+    font-family: 'Recursive', sans-serif;
+    font-variation-settings: "MONO"1, "wght"420;
+    text-align: left;
+    float: right;
+    padding: 3px 15px 3px 15px;
+    background-color: white;
+    border: 1px solid rgba(150, 150, 150);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: background-color 1s;
+    background-color: rgb(240, 240, 240);
+    animation: bhover 1000ms forwards;
+    border: 1px solid rgba(100, 100, 100);
+}
+
+@keyframes bhover {
+    0% {
+        font-variation-settings: "MONO"1, 'wght'420;
+    }
+
+
+    100% {
+        font-variation-settings: "MONO"1, 'wght'500;
+    }
+}
+
+
+/*Silhoeta - Cabeça*/
+#STRANGERhead {
+    position: absolute;
+    font-weight: 800;
+    font-size: 5px;
+    word-spacing: -1px;
+    line-height: 5px;
+    overflow: hidden;
+    border-radius: 200px 200px 164px 164px;
+    border: 0px solid #000000;
+    display: none;
+    color: #FFF;
+}
+
+/*Silhoeta - Corpo*/
+#STRANGERbody {
+    position: absolute;
+    font-weight: 900;
+    font-size: 5px;
+    word-spacing: -1px;
+    line-height: 5px;
+    overflow: hidden;
+    border-radius: 75px 75px 0px 0px;
+    border: 0px solid #000000;
+    display: none;
+    color: #FFF;
+}
+
+/*Proporções silhoeta para telemovel portrait*/
+.SHeadTport {
+    height: 22vh;
+    top: 21.5vh;
+    width: 40%;
+    left: 30%;
+}
+
+.SBodyTport {
+    height: 28vh;
+    top: 43vh;
+    width: 60%;
+    left: 20%;
+}
+
+/*Proporções silhoeta para telemovel landscape*/
+.SHeadTlands {
+    height: 25vh;
+    top: 13.5vh;
+    width: 20%;
+    left: 40%;
+}
+
+.SBodyTlands {
+    height: 33vh;
+    top: 38vh;
+    width: 32%;
+    left: 34%;
+}
+
+/*Proporções silhoeta para tablet/portateis portrait*/
+.SHeadTaport {
+    height: 24vh;
+    top: 19.5vh;
+    width: 36%;
+    left: 32%;
+}
+
+.SBodyTaport {
+    height: 28vh;
+    top: 43vh;
+    width: 56%;
+    left: 22%;
+}
+
+/*Proporções silhoeta para tablet/portateis landscape*/
+.SHeadTalands {
+    height: 25vh;
+    top: 13.5vh;
+    width: 16%;
+    left: 42%;
+}
+
+.SBodyTalands {
+    height: 33vh;
+    top: 38vh;
+    width: 28%;
+    left: 36%;
+}
+
+.SHeadmonitor {
+    height: 25vh;
+    top: 13.5vh;
+    width: 18%;
+    left: 41%;
+}
+
+.SBodymonitor {
+    height: 33vh;
+    top: 38vh;
+    width: 30%;
+    left: 35%;
+}
+
+
+#VIDEOcontainer {
+    position: absolute;
+    top: 5.5vh;
+    margin: 0px auto;
+    height: 65vh;
+    overflow: hidden;
+    display: none;
+}
+
+#videoElement {
+    /*LiveStream centrada em relação ao container*/
+    position: absolute;
+    transform: rotateY(180deg);
+    /*Imagem espelhada*/
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    margin-Left: -50%;
+    object-Fit: cover;
+    /*imagem preenche todo o container*/
+    z-index: 1;
+
+}
