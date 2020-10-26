@@ -73,11 +73,17 @@ function myNext() {
 
         //Estilo default de "Grass"
         let grass = document.getElementById("GRASS");
-        grass.classList.toggle("GRASSzero");
+        grass.classList.add("GRASSzero");
 
         //Estilo default de "Sky"
         let sky = document.getElementById("SKY");
-        sky.classList.toggle("SKYzero");
+        sky.classList.add("SKYzero");
+
+        //Remover estilo de "GRASS" do click 1
+        grass.classList.remove("GRASSum");
+
+        //Remover stilo de "SKY" do click 1
+        sky.classList.remove("SKYum");
 
     }
 
@@ -94,11 +100,17 @@ function myNext() {
 
         //Estilo de "GRASS" do click 1
         let grass = document.getElementById("GRASS");
-        grass.classList.toggle("GRASSum");
+        grass.classList.add("GRASSum");
 
         //Estilo de "SKY" do click 1
         let sky = document.getElementById("SKY");
-        sky.classList.toggle("SKYum");
+        sky.classList.add("SKYum");
+
+        //Remover estilo de "GRASS" do click 2
+        grass.classList.remove("GRASSdois");
+
+        //Remover stilo de "SKY" do click 2
+        sky.classList.remove("SKYdois");
     }
 
     //Terceira página
@@ -110,11 +122,17 @@ function myNext() {
 
         //Estilo de "GRASS" do click 2
         let grass = document.getElementById("GRASS");
-        grass.classList.toggle("GRASSdois");
+        grass.classList.add("GRASSdois");
 
         //Estilo de "SKY" do click 2
         let sky = document.getElementById("SKY");
-        sky.classList.toggle("SKYdois");
+        sky.classList.add("SKYdois");
+
+        //Remover estilo de "GRASS" do click 3
+        grass.classList.remove("GRASStres");
+
+        //Remover estilo de "SKY" do click 3
+        sky.classList.remove("SKYtres");
     }
 
     //Quarta página
@@ -279,7 +297,8 @@ function myMD() {
         document.getElementById("FR").style.right = "6%";
 
         let box = document.getElementById("box");
-        box.classList.toggle("boxTLM");
+        box.classList.add("boxTLM");
+        box.classList.remove("boxTabl");
 
         document.getElementById("VIDEOcontainer").style.left = "6%";
         document.getElementById("VIDEOcontainer").style.width = "87%";
@@ -298,15 +317,20 @@ function myMD() {
         if (portrait.matches) {
             let shead = document.getElementById("STRANGERhead");
             shead.classList.toggle("SHeadTport");
+            shead.classList.remove("SHeadTaport");
             let sbody = document.getElementById("STRANGERbody");
             sbody.classList.toggle("SBodyTport");
+            sbody.classList.remove("SBodyTaport");
 
             //Telemovel e landscape
         } else {
             let shead = document.getElementById("STRANGERhead");
             shead.classList.toggle("SHeadTlands");
+            shead.classList.remove("SHeadTalands");
             let sbody = document.getElementById("STRANGERbody");
             sbody.classList.toggle("SBodyTlands");
+            sbody.classList.remove("SBodyTalands");
+            
 
         }
 
@@ -336,7 +360,8 @@ function myMD() {
         document.getElementById("FR").style.right = "16%";
 
         let box = document.getElementById("box");
-        box.classList.toggle("boxTabl");
+        box.classList.add("boxTabl");
+        box.classList.remove("boxPort");
 
         document.getElementById("VIDEOcontainer").style.width = "65%";
         document.getElementById("VIDEOcontainer").style.left = "17.5%";
@@ -353,17 +378,17 @@ function myMD() {
         //Tablets portrait
         if (portrait.matches) {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTaport");
+            shead.classList.add("SHeadTaport");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTaport");
+            sbody.classList.add("SBodyTaport");
 
 
             //Tablets landscape
         } else {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTalands");
+            shead.classList.add("SHeadTalands");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTalands");
+            sbody.classList.add("SBodyTalands");
         }
 
 
@@ -393,7 +418,8 @@ function myMD() {
         document.getElementById("FR").style.right = "16%";
 
         let box = document.getElementById("box");
-        box.classList.toggle("boxPort");
+        box.classList.add("boxPort");
+        box.classList.remove("boxMonit");
 
         document.getElementById("VIDEOcontainer").style.width = "65%";
         document.getElementById("VIDEOcontainer").style.left = "17.5%";
@@ -410,16 +436,20 @@ function myMD() {
         //Portateis / monitores portrait
         if (portrait.matches) {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTaport");
+            shead.classList.add("SHeadTaport");
+            shead.classList.remove("SHeadmonitor");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTaport");
+            sbody.classList.add("SBodyTaport");
+            sbody.classList.remove("SBodymonitor");
 
             //Tablets landscape
         } else {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTalands");
+            shead.classList.add("SHeadTalands");
+            shead.classList.remove("SHeadmonitor");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTalands");
+            sbody.classList.add("SBodyTalands");
+            sbody.classList.remove("SBodymonitor");
         }
 
         //Monitores grandes
@@ -448,7 +478,7 @@ function myMD() {
         document.getElementById("FR").style.right = "16%";
 
         let box = document.getElementById("box");
-        box.classList.toggle("boxMonit");
+        box.classList.add("boxMonit");
 
         document.getElementById("VIDEOcontainer").style.width = "65%";
         document.getElementById("VIDEOcontainer").style.left = "17.5%";
@@ -461,7 +491,7 @@ function myMD() {
             element.style.paddingLeft = "10px";
             element.style.paddingRight = "10px";
         });
-        
+
         let shead = document.getElementById("STRANGERhead");
         shead.classList.toggle("SHeadmonitor");
         let sbody = document.getElementById("STRANGERbody");
