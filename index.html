@@ -1,0 +1,86 @@
+<!--WB2 2020/21 - Matilde Ferreira-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Safe Place</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/css-reset.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="favicon/favicon.ico" />
+
+</head>
+
+<body>
+    <div id="inicio">
+        <h1 onclick="myTitulo()" id="titulo">the safe place</h1>
+
+        <input type="text" id="myName" placeholder="insert your name">
+    </div>
+
+
+    <!--Trama textual de fundo-->
+    <p id="BG"></p>
+    <!--Trama textual do céu-->
+    <p id="SKY" class="SKYzero"></p>
+    <!--Trama textual do relvado-->
+    <p id="GRASS" class="GRASSzero"></p>
+
+    <!--Trama textual da janela-->
+    <!--FRAME TOP-->
+    <p id="FT" class="WINDOW"></p>
+    <!--FRAME BOTTOM-->
+    <p id="FB" class="WINDOW"></p>
+    <!--FRAME RIGHT-->
+    <p id="FR" class="WINDOW"></p>
+    <!--FRAME LEFT-->
+    <p id="FL" class="WINDOW"></p>
+    <!--FRAME MIDDLE VERTICAL-->
+    <p id="FMV" class="WINDOW"></p>
+    <!--FRAME MIDDLE HORIZONTAL-->
+    <p id="FMH" class="WINDOW"></p>
+    
+    <!--SILHOETA-->
+    <p id="STRANGERhead"></p>
+    <p id="STRANGERbody"></p>
+
+    <!--Caixa de diálogo-->
+    <div id=box>
+        <!--Frases da caixa de diálogo-->
+        <!--Primeira-->
+        <p id="um" class="frases">hi, <span id="nome"></span>!</p>
+        <!--Segunda-->
+        <p id="dois" class="frases">your device is a window to the world, enjoy it!</p>
+        <!--Terceira-->
+        <p id="tres" class="frases">you're alone and safe</p>
+        <!--Quarta-->
+        <p id="quatro" class="frases">but i see you</p>
+        <!--Quinta-->
+        <p id="cinco" class="frases">You're in <span id="city"></span>, <span id="country"></span> and your ip is <span id="ip"></span></p>
+
+        <!--Botões next e home-->
+        <div class id="holder">
+            <button class="button" onclick="myNext()" id="next">next</button>
+            <button class="button" onclick="myHome()">home</button>
+            <button class="button" onclick="myPrev()">previous</button>
+        </div>
+    </div>
+    
+    <!--WEBCAM-->
+    <div id="VIDEOcontainer">
+
+        <video autoplay="autoplay" id="videoElement">
+
+        </video>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body></html>
