@@ -252,7 +252,9 @@ function myHome() {
     location.reload();
 }
 
-window.addEventListener('resize', function(){myMD(), console.log('resized')}, true);
+window.addEventListener('resize', function () {
+    myMD(), console.log('resized')
+}, true);
 
 //Break points dos media query tamanhos e orientação
 //de modo a não sobrecarregar a página com número excessivo de repetições das palavras, etc
@@ -293,6 +295,8 @@ function myMD() {
         let box = document.getElementById("box");
         box.classList.add("boxTLM");
         box.classList.remove("boxTabl");
+        box.classList.remove("boxMonit");
+        box.classList.remove("boxPort");
 
         document.getElementById("VIDEOcontainer").style.left = "6%";
         document.getElementById("VIDEOcontainer").style.width = "87%";
@@ -310,21 +314,25 @@ function myMD() {
         //Telemovel e portrait
         if (portrait.matches) {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTport");
+            shead.classList.add("SHeadTport");
             shead.classList.remove("SHeadTaport");
+            shead.classList.remove("SHeadTlands");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTport");
+            sbody.classList.add("SBodyTport");
             sbody.classList.remove("SBodyTaport");
+            sbody.classList.remove("SBodyTlands");
 
             //Telemovel e landscape
         } else {
             let shead = document.getElementById("STRANGERhead");
-            shead.classList.toggle("SHeadTlands");
+            shead.classList.add("SHeadTlands");
             shead.classList.remove("SHeadTalands");
+            shead.classList.remove("SHeadTport");
             let sbody = document.getElementById("STRANGERbody");
-            sbody.classList.toggle("SBodyTlands");
+            sbody.classList.add("SBodyTlands");
             sbody.classList.remove("SBodyTalands");
-            
+            sbody.classList.remove("SBodyTport");
+
 
         }
 
@@ -356,6 +364,7 @@ function myMD() {
         let box = document.getElementById("box");
         box.classList.add("boxTabl");
         box.classList.remove("boxPort");
+        box.classList.remove("boxMonit");
 
         document.getElementById("VIDEOcontainer").style.width = "65%";
         document.getElementById("VIDEOcontainer").style.left = "17.5%";
@@ -373,16 +382,20 @@ function myMD() {
         if (portrait.matches) {
             let shead = document.getElementById("STRANGERhead");
             shead.classList.add("SHeadTaport");
+            shead.classList.remove("SHeadTalands");
             let sbody = document.getElementById("STRANGERbody");
             sbody.classList.add("SBodyTaport");
+            sbody.classList.remove("SBodyTalands");
 
 
             //Tablets landscape
         } else {
             let shead = document.getElementById("STRANGERhead");
             shead.classList.add("SHeadTalands");
+            shead.classList.remove("SHeadTaport");
             let sbody = document.getElementById("STRANGERbody");
             sbody.classList.add("SBodyTalands");
+            sbody.classList.remove("SBodyTaport");
         }
 
 
@@ -432,9 +445,11 @@ function myMD() {
             let shead = document.getElementById("STRANGERhead");
             shead.classList.add("SHeadTaport");
             shead.classList.remove("SHeadmonitor");
+            shead.classList.remove("SHeadTalands");
             let sbody = document.getElementById("STRANGERbody");
             sbody.classList.add("SBodyTaport");
             sbody.classList.remove("SBodymonitor");
+            sbody.classList.remove("SBodyTalands");
 
             //Tablets landscape
         } else {
