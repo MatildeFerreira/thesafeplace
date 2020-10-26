@@ -519,6 +519,7 @@ function myMD() {
     } else {
         document.getElementById("BG").style.height = "100vh";
         document.getElementById("inicio").style.height = "100vh";
+        document.getElementById("box").style.height = "17vh";
     }
 
 }
