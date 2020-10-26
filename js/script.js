@@ -252,6 +252,8 @@ function myHome() {
     location.reload();
 }
 
+window.addEventListener('resize', function(){myMD(), console.log('resized')}, true);
+
 //Break points dos media query tamanhos e orientação
 //de modo a não sobrecarregar a página com número excessivo de repetições das palavras, etc
 function myMD() {
@@ -261,14 +263,6 @@ function myMD() {
     let portatil = window.matchMedia('(min-width: 900px) and (max-width: 1300px)');
     let monitor = window.matchMedia('(min-width: 1300px)');
     let portrait = window.matchMedia('(orientation: portrait)');
-
-    //De modo a não ser preciso atualizar a página para atualizar os break points (por exemplo diminuir/aumentar a janela)
-    //O window.addEventListener causava alguns bugs ao fazer resize (e.g enquanto se está a diminuir não vai atualizando, por vezes não assumia o media query correspondente)
-    telemovel.addListener(myMD);
-    tablet.addListener(myMD);
-    portatil.addListener(myMD);
-    monitor.addListener(myMD);
-    portrait.addListener(myMD);
 
     //Breakpoint Telemovel
     if (telemovel.matches) {
